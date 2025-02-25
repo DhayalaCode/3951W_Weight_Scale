@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=lcd.c /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/main.c /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/voltmeter.c
+SOURCEFILES_QUOTED_IF_SPACED=lcd.c main.c voltmeter.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/lcd.o ${OBJECTDIR}/_ext/1754650969/main.o ${OBJECTDIR}/_ext/1754650969/voltmeter.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/_ext/1754650969/main.o.d ${OBJECTDIR}/_ext/1754650969/voltmeter.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/voltmeter.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/lcd.o ${OBJECTDIR}/_ext/1754650969/main.o ${OBJECTDIR}/_ext/1754650969/voltmeter.o
+OBJECTFILES=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o
 
 # Source Files
-SOURCEFILES=lcd.c /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/main.c /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/voltmeter.c
+SOURCEFILES=lcd.c main.c voltmeter.c
 
 
 
@@ -95,17 +95,17 @@ ${OBJECTDIR}/lcd.o: lcd.c  .generated_files/flags/default/27c6436e0de912fb607c7a
 	@${RM} ${OBJECTDIR}/lcd.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  lcd.c  -o ${OBJECTDIR}/lcd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lcd.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/1754650969/main.o: /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/main.c  .generated_files/flags/default/384c7f7c70fce81c33badfef86fa7db914b65e5a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/1754650969" 
-	@${RM} ${OBJECTDIR}/_ext/1754650969/main.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1754650969/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/main.c  -o ${OBJECTDIR}/_ext/1754650969/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1754650969/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/3d33b5d30b530715801fa31fc4490dec76087d68 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/1754650969/voltmeter.o: /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/voltmeter.c  .generated_files/flags/default/cc54c5f122d16acc912f1b03e6ba417b06f5b95d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/1754650969" 
-	@${RM} ${OBJECTDIR}/_ext/1754650969/voltmeter.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1754650969/voltmeter.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/voltmeter.c  -o ${OBJECTDIR}/_ext/1754650969/voltmeter.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1754650969/voltmeter.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/voltmeter.o: voltmeter.c  .generated_files/flags/default/a6a98dd51538ad2b750aeb529cd232ca28c7a060 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/voltmeter.o.d 
+	@${RM} ${OBJECTDIR}/voltmeter.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  voltmeter.c  -o ${OBJECTDIR}/voltmeter.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/voltmeter.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
 ${OBJECTDIR}/lcd.o: lcd.c  .generated_files/flags/default/25f34b5bb12fde549a84c599b3928acb9cdf3306 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
@@ -114,17 +114,17 @@ ${OBJECTDIR}/lcd.o: lcd.c  .generated_files/flags/default/25f34b5bb12fde549a84c5
 	@${RM} ${OBJECTDIR}/lcd.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  lcd.c  -o ${OBJECTDIR}/lcd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/lcd.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/1754650969/main.o: /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/main.c  .generated_files/flags/default/4d8e4016efa5347157f3a17d401db19171e29fe5 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/1754650969" 
-	@${RM} ${OBJECTDIR}/_ext/1754650969/main.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1754650969/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/main.c  -o ${OBJECTDIR}/_ext/1754650969/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1754650969/main.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/83d5a08cac68c670801fd59b4d31f44e4c279ad0 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/_ext/1754650969/voltmeter.o: /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/voltmeter.c  .generated_files/flags/default/6e802cecdeed074c93c20305bc56adb1d9b71452 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/1754650969" 
-	@${RM} ${OBJECTDIR}/_ext/1754650969/voltmeter.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1754650969/voltmeter.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  /Users/jansiranibalasubramanian/Desktop/balas106_lab6a_v001.X/voltmeter.c  -o ${OBJECTDIR}/_ext/1754650969/voltmeter.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/_ext/1754650969/voltmeter.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+${OBJECTDIR}/voltmeter.o: voltmeter.c  .generated_files/flags/default/d397a748b61f2591c49eda84c54867a04054546c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/voltmeter.o.d 
+	@${RM} ${OBJECTDIR}/voltmeter.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  voltmeter.c  -o ${OBJECTDIR}/voltmeter.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/voltmeter.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
