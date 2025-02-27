@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=lcd.c main.c voltmeter.c
+SOURCEFILES_QUOTED_IF_SPACED=lcd.c main.c voltmeter.c I2C.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/voltmeter.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o ${OBJECTDIR}/I2C.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/voltmeter.o.d ${OBJECTDIR}/I2C.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o
+OBJECTFILES=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o ${OBJECTDIR}/I2C.o
 
 # Source Files
-SOURCEFILES=lcd.c main.c voltmeter.c
+SOURCEFILES=lcd.c main.c voltmeter.c I2C.c
 
 
 
@@ -107,6 +107,12 @@ ${OBJECTDIR}/voltmeter.o: voltmeter.c  .generated_files/flags/default/a6a98dd515
 	@${RM} ${OBJECTDIR}/voltmeter.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  voltmeter.c  -o ${OBJECTDIR}/voltmeter.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/voltmeter.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/I2C.o: I2C.c  .generated_files/flags/default/dcb3991944fc9a3f8adbbdab79fae42865f74665 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/I2C.o.d 
+	@${RM} ${OBJECTDIR}/I2C.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  I2C.c  -o ${OBJECTDIR}/I2C.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/I2C.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 else
 ${OBJECTDIR}/lcd.o: lcd.c  .generated_files/flags/default/25f34b5bb12fde549a84c599b3928acb9cdf3306 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -125,6 +131,12 @@ ${OBJECTDIR}/voltmeter.o: voltmeter.c  .generated_files/flags/default/d397a748b6
 	@${RM} ${OBJECTDIR}/voltmeter.o.d 
 	@${RM} ${OBJECTDIR}/voltmeter.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  voltmeter.c  -o ${OBJECTDIR}/voltmeter.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/voltmeter.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/I2C.o: I2C.c  .generated_files/flags/default/a42b715551c4f78444ae006cb81f02c0d31a770 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/I2C.o.d 
+	@${RM} ${OBJECTDIR}/I2C.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  I2C.c  -o ${OBJECTDIR}/I2C.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/I2C.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
