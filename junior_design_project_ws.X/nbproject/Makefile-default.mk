@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=lcd.c main.c voltmeter.c I2C.c
+SOURCEFILES_QUOTED_IF_SPACED=lcd.c main.c voltmeter.c I2C.c button_switch.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o ${OBJECTDIR}/I2C.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/voltmeter.o.d ${OBJECTDIR}/I2C.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/button_switch.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/voltmeter.o.d ${OBJECTDIR}/I2C.o.d ${OBJECTDIR}/button_switch.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o ${OBJECTDIR}/I2C.o
+OBJECTFILES=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/button_switch.o
 
 # Source Files
-SOURCEFILES=lcd.c main.c voltmeter.c I2C.c
+SOURCEFILES=lcd.c main.c voltmeter.c I2C.c button_switch.c
 
 
 
@@ -113,6 +113,12 @@ ${OBJECTDIR}/I2C.o: I2C.c  .generated_files/flags/default/dcb3991944fc9a3f8adbbd
 	@${RM} ${OBJECTDIR}/I2C.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  I2C.c  -o ${OBJECTDIR}/I2C.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/I2C.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/button_switch.o: button_switch.c  .generated_files/flags/default/304486607ba776483302cad49cc5680f79a0420e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/button_switch.o.d 
+	@${RM} ${OBJECTDIR}/button_switch.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  button_switch.c  -o ${OBJECTDIR}/button_switch.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/button_switch.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 else
 ${OBJECTDIR}/lcd.o: lcd.c  .generated_files/flags/default/25f34b5bb12fde549a84c599b3928acb9cdf3306 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -137,6 +143,12 @@ ${OBJECTDIR}/I2C.o: I2C.c  .generated_files/flags/default/a42b715551c4f78444ae00
 	@${RM} ${OBJECTDIR}/I2C.o.d 
 	@${RM} ${OBJECTDIR}/I2C.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  I2C.c  -o ${OBJECTDIR}/I2C.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/I2C.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/button_switch.o: button_switch.c  .generated_files/flags/default/6c6c4ca2e336bd90c2b87d5b33564fa5a99efc1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/button_switch.o.d 
+	@${RM} ${OBJECTDIR}/button_switch.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  button_switch.c  -o ${OBJECTDIR}/button_switch.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/button_switch.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
