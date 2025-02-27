@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=lcd.c main.c voltmeter.c I2C.c button_switch.c
+SOURCEFILES_QUOTED_IF_SPACED=lcd.c main.c voltmeter.c I2C.c button_switch.c rgb_lcd_display.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/button_switch.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/voltmeter.o.d ${OBJECTDIR}/I2C.o.d ${OBJECTDIR}/button_switch.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/button_switch.o ${OBJECTDIR}/rgb_lcd_display.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/voltmeter.o.d ${OBJECTDIR}/I2C.o.d ${OBJECTDIR}/button_switch.o.d ${OBJECTDIR}/rgb_lcd_display.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/button_switch.o
+OBJECTFILES=${OBJECTDIR}/lcd.o ${OBJECTDIR}/main.o ${OBJECTDIR}/voltmeter.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/button_switch.o ${OBJECTDIR}/rgb_lcd_display.o
 
 # Source Files
-SOURCEFILES=lcd.c main.c voltmeter.c I2C.c button_switch.c
+SOURCEFILES=lcd.c main.c voltmeter.c I2C.c button_switch.c rgb_lcd_display.c
 
 
 
@@ -119,6 +119,12 @@ ${OBJECTDIR}/button_switch.o: button_switch.c  .generated_files/flags/default/30
 	@${RM} ${OBJECTDIR}/button_switch.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  button_switch.c  -o ${OBJECTDIR}/button_switch.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/button_switch.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/rgb_lcd_display.o: rgb_lcd_display.c  .generated_files/flags/default/d0615c0c2506320c5bb216b5ffa4c29330fcd385 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/rgb_lcd_display.o.d 
+	@${RM} ${OBJECTDIR}/rgb_lcd_display.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  rgb_lcd_display.c  -o ${OBJECTDIR}/rgb_lcd_display.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/rgb_lcd_display.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 else
 ${OBJECTDIR}/lcd.o: lcd.c  .generated_files/flags/default/25f34b5bb12fde549a84c599b3928acb9cdf3306 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -149,6 +155,12 @@ ${OBJECTDIR}/button_switch.o: button_switch.c  .generated_files/flags/default/6c
 	@${RM} ${OBJECTDIR}/button_switch.o.d 
 	@${RM} ${OBJECTDIR}/button_switch.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  button_switch.c  -o ${OBJECTDIR}/button_switch.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/button_switch.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/rgb_lcd_display.o: rgb_lcd_display.c  .generated_files/flags/default/ba877ae75d657bfb1d4eaf23ace457324821766b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/rgb_lcd_display.o.d 
+	@${RM} ${OBJECTDIR}/rgb_lcd_display.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  rgb_lcd_display.c  -o ${OBJECTDIR}/rgb_lcd_display.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/rgb_lcd_display.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 
