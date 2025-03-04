@@ -65,20 +65,25 @@ int main(void) {
        while (1) {
          
            if (writeToLcd == 1) {
-                char adStr[20];
-                //_AD1IF = 0;
-                // Update LCD every 100ms
-                voltage = (3.3 / 1024) * getAvg(); // Calculate average voltage
-                sprintf(adStr, "%6.4f V", voltage); // Format voltage string
-                //lcd_clr();
+                char adStr[20]; // Buffer for LCD string
+            
+                // Get Voltage from ADC
+                float voltage = getVoltage(); 
+
+                // Get Weight from Voltage (Assuming the weight equation is correct)
+                float weight = getWeight();
+
+                // Format and print voltage to LCD
+                sprintf(adStr, "V: %6.4f V", voltage);
                 lcd_setCursor(0, 0);
+                lcd_printStr(adStr); 
 
-                lcd_printStr(adStr); // Display voltage on LCD
+                // Format and print weight to LCD
+                sprintf(adStr, "W: %6.2f g", weight);  
+                lcd_setCursor(0, 1);
+                lcd_printStr(adStr); 
 
-                lcd_setCursor(0,1);
-                lcd_printStr("ADC LAB6");
-                
-                writeToLcd = 0;
+                writeToLcd = 0; // Reset flag after updating LCD
            }
        }   
     

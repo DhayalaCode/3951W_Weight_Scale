@@ -10,6 +10,9 @@
 #define BUFFSIZE 1024
 #define NUMSAMPLES 128
 #define K 128
+#define VREF_MINUS 1
+#define VREF_PLUS 2.5
+#define ADC_MAX 1023
 
 int adc_buffer[BUFFSIZE];
 int buffer_index = 0;
@@ -91,6 +94,17 @@ int getAvg() {
     return sum / NUMSAMPLES;
 }
 
+float getWeight() {
+    float weight;
+    weight = 0.00139 * getVoltage() + 1.059;
+    return weight;
+}
+
+float getVoltage() {
+    float voltage;
+    voltage =  VREF_MINUS + ((float)getAvg() / ADC_MAX) * (VREF_PLUS - VREF_MINUS);
+    return voltage;
+}
 
 /*
  * initializes all buffer entries to zero.
